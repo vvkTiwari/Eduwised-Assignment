@@ -1,0 +1,65 @@
+<div class="container">
+	<div class="row">
+		<div class="col-sm-3 float-left left-panel">
+			<h3>Filters</h3>
+			  <div class="">
+				<div type="button" id="movies" class="btn-lg">Movies</div>
+				<div  class="movie">
+					<div class="menu" *ngFor="let movie of movies">
+						<div (click)="selectChar(movie.characters)" class="item">{{movie.title}}</div>
+					</div>
+				</div>
+				<div type="button" id="species" class="btn-lg">Species</div>
+				<div  class="specie" id="specie">
+					<div (click)="selectChar(specie.people)" class="menu"*ngFor="let specie of species">
+						<div class="item">{{specie.name}}</div>
+					</div>
+				</div>
+				<div class="range">
+					<div>Range</div>
+					<form novalidate #birthForm="ngForm">
+						<table>
+							<tr><th align-self-center><small>From</small></th><th align-self-center><small>Till</small></th></tr>
+							<tr>
+								<td>
+									<div>
+									<input class="range-input" type="text" [(ngModel)]="range.start" name="start" #start>
+									<select class="range-input" [(ngModel)]="range.syt" name="syt" #syt>Year
+										<option value="bby">BBY</option>
+										<option value="aby">ABY</option>
+									</select>						
+									</div>								
+								</td>
+								<td>
+									<div>
+										<input class="range-input" [(ngModel)]="range.end" type="text" name="end" #end>
+										<select class="range-input" [(ngModel)]="range.eyt" name="eyt" #eyt>Year
+											<option value="bby">BBY</option>
+											<option value="aby">ABY</option>
+										</select>						
+									</div>	
+								</td>
+							</tr>
+						</table>
+						<div class="btn btn-md shadow" (click)="onSubmit()">Apply</div>
+					</form>
+				</div>
+			</div>
+		</div>
+  		<div class="col-sm-9 float-left right-panel">
+			<h2>Characters List</h2>
+			<div cla="people" *ngIf="people">
+				<div *ngFor="let p of people">
+					<div class=" col-12 col-md-6 float-left shadow align-items-center card" (click)="profileDetails(p.url)">
+						<img class="align-self-center" src="../assets/images/vivek.jpeg" height="300px" width="300px">
+						<div class="card-body">
+							<h4>{{p.name}}</h4>
+						</div>
+					</div>				
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+

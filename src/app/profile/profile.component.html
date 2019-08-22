@@ -1,0 +1,39 @@
+<div class="container">
+	<div *ngIf="userData" class="card profile-pic col-12 col-md-6 float-left">
+		<img class="align-self-center" src="../assets/images/vivek.jpeg" width="100%" height="100%">
+		<div class="card-title" >{{userData.name}}</div>
+		<div class="card-content">
+			<ul class="user-detais">
+				<li><span>Height :</span>{{userData.height}}</li>
+				<li><span>Weight :</span>{{userData.mass}}</li>
+				<li><span>Hair Color :</span>{{userData.hair_color}}</li>
+				<li><span>Skin Color :</span>{{userData.skin_color}}</li>
+				<li><span>Eye Color :</span>{{userData.eye_color}}</li>
+				<li><span>Birth Year :</span>{{userData.birth_year}}</li>
+				<li><span>Gender :</span>{{userData.gender}}</li>
+			</ul>
+		</div>
+	</div>
+	<div class="container right-panel col-12 col-md-6">
+		<div class="card">
+			<div class="card-title"><h5>Films</h5></div>
+			<div class="card-content" *ngFor="let movie of movies">
+				<p>{{movie.title}}</p>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card-title" *ngIf="vehicles"><h5>Vehicles</h5></div>
+			 <div *ngFor="let vehicle of vehicles" class="card-content">
+				<p>{{vehicle.name}}</p> 
+			</div>
+		</div>
+		<div class="card">
+			<div class="card-title" *ngIf="vehicles"><h5>Starships</h5></div>
+			<div *ngIf="starships" class="card-content">
+				<div *ngFor="let ship of starships">
+					<p>{{ship.name}}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

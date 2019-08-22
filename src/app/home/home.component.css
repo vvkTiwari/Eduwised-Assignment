@@ -1,0 +1,72 @@
+.container{
+	margin: 50px;
+}
+ul{
+	list-style-type: none;
+}
+img{
+	opacity: 0.5;
+}
+.card{
+	background: #222;
+	padding-top: 20px;
+}
+
+img:hover{
+	opacity: 1;
+	cursor: pointer;
+}
+.btn-lg{
+	background-color: #222;
+	color: yellow;
+}
+.menu{
+	background-color: #222;
+	padding:0 10px;
+	font-size: 14px;
+}
+.item{
+	color:yellow;
+}
+.movie{
+	display: none;
+}
+.specie{
+	display: none;
+}
+.active{
+	display: block;
+}
+.range-input{
+	width: 40px;
+	margin: 5px;
+	border-radius: 20px;
+}
+.range{
+	margin: 20px;
+	font-size: 20px;
+}
+.btn-md{
+	color: yellow;
+}
+.item{
+	padding: 5px;
+}
+.menu:hover{
+	cursor: pointer;
+	background: black;
+}
+option{
+	font-size: 10px;
+	font-family: 'Oswald' 'sans-serif';
+}
+select{
+	font-size: 10px;
+	font-family: 'Oswald' 'sans-serif';
+}
+.btn:hover{
+	cursor: pointer;
+}
+.errMess{
+	font-size: 30px;
+}
