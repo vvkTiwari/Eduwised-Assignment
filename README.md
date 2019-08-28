@@ -9,7 +9,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 ## How to install and run the App ?
 Note: You'll require Angular 8+ and Node.js 10.9+ version.
 1. Pull the project to your local system.
-2. Navigate to Eduwised-Assignment Folder.
+2. Navigate to Starwars Folder.
 3. Run npm install.
 4. Run ng serve -o
 
